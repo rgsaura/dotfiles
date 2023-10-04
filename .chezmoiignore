@@ -1,6 +1,8 @@
 {{ if ne .chezmoi.os "darwin" }}
-Library/Application Support/App/file.conf
+~/.config/yabai
+~/config/sketchybar
+~/config/skhd
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
-.config/app/file.conf
+
 {{ end }}
