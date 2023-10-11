@@ -22,4 +22,4 @@ fi
 sudo sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /bin
 
 export PATH=$HOME/bin:$PATH
-chezmoi init --apply --verbose git@github.com:rgsaura/dotfiles.git
+chezmoi init --apply --verbose rgsaura
