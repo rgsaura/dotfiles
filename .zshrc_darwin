@@ -62,15 +62,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 PATH=$HOME/.local/share/fig/plugins/git-open:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMwareFusion.app/Contents/Public:/Library/TeX/texbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Applications/TopazPhotoAI.app/Contents/Resources/bin:/Applications/Wireshark.app/Contents/MacOS:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:$HOME/.cargo/bin:$HOME/.fig/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.local/share/fig/plugins/git-flow:$HOME/.local/share/fig/plugins/git-extra-commands_unixorn/bin:$HOME/.local/share/fig/plugins/git-extra-commands_unixorn/bin:$HOME/.local/share/fig/plugins/git-flow
 # Custom Aliases
 
-alias ll='lsd -lh --group-dirs=first'
-alias la='lsd -a --group-dirs=first'
-alias l='lsd --group-dirs=first'
-alias lla='lsd -lha --group-dirs=first'
-alias ls='lsd --group-dirs=first'
-alias cat='/opt/homebrew/bin/bat --paging=never'
-alias catn='cat'
-alias catnl='batcat'
-alias cl='clear'
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

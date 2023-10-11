@@ -7,7 +7,7 @@ cd "$HOME" || exit
 system_type=$(uname -s)
 
 if [ "$system_type" == "Darwin" ]; then
-  echo "› Mac"
+  echo "Updating Packages › Mac"
   # Fix that zsh nonsense
   brew install bash
   brew install git
@@ -15,14 +15,13 @@ if [ "$system_type" == "Darwin" ]; then
   brew install neovim
 
   brew install python
-  pip install --upgrade setuptools
   pip install --upgrade pip
   brew install yarn
   brew install golang
   brew install direnv
 
-  brew cask install docker
-  brew cask install iterm2
+  brew install docker
+  brew install iterm2
 
   # Additional Mac-specific settings
   # defaults write com.apple.dock workspaces-auto-swoosh -bool NO
@@ -39,7 +38,7 @@ if [ "$system_type" == "Darwin" ]; then
   # ./unison.sh
 
 elif [ "$system_type" == "Linux" ]; then
-  echo "› Linux"
+  echo "Updating Packages › Linux"
   sudo apt-get install -y $(awk '{print $1}' ~/.local/share/chezmoi/pkglist.txt)
 
 else

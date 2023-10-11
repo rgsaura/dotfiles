@@ -1,8 +1,10 @@
 {{ if ne .chezmoi.os "darwin" }}
 ~/.config/yabai
-~/config/sketchybar
-~/config/skhd
-~/config/zsh
+~/.config/sketchybar
+~/.config/sketchybar_2
+~/.config/skhd
+~/.hyper.js
+
 {{ end }}
 
 
