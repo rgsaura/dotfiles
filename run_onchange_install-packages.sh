@@ -25,18 +25,18 @@ if [ "$system_type" == "Darwin" ]; then
   brew cask install iterm2
 
   # Additional Mac-specific settings
-  defaults write com.apple.dock workspaces-auto-swoosh -bool NO
-  defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-  defaults write com.apple.screencapture location ~/Pictures/Screenshots
+  # defaults write com.apple.dock workspaces-auto-swoosh -bool NO
+  # defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+  # defaults write com.apple.screencapture location ~/Pictures/Screenshots
 
-  git config --global core.excludesfile ~/.gitignore
-  sudo chsh -s /usr/local/bin/bash "$USER"
-  cd ~/bin/setup/
+  # git config --global core.excludesfile ~/.gitignore
+  # sudo chsh -s /usr/local/bin/bash "$USER"
+  # cd ~/bin/setup/
 
-  ./bashmarks.sh
-  ./nvm.sh
-  ./rust.sh
-  ./unison.sh
+  # ./bashmarks.sh
+  # ./nvm.sh
+  # ./rust.sh
+  # ./unison.sh
 
 elif [ "$system_type" == "Linux" ]; then
   echo "› Linux"

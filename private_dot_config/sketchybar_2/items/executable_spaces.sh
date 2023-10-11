@@ -22,7 +22,7 @@ do
     icon.highlight_color=$CYAN
     label.color=$GREY
     label.highlight_color=$WHITE
-    label.font="sketchybar-app-font:Regular:16.0"
+    label.font="sketchybar_2-app-font:Regular:16.0"
     label.y_offset=-1
     background.color=$BACKGROUND_1
     background.border_color=$BACKGROUND_2
@@ -31,7 +31,7 @@ do
     # script="$PLUGIN_DIR/space.sh"
   )
 
-  sketchybar --add space space.$sid left    \
+  sketchybar_2 --add space space.$sid left    \
              --set space.$sid "${space[@]}" \
              --subscribe space.$sid mouse.clicked
 done
@@ -48,11 +48,11 @@ separator=(
   padding_right=-5
   label.drawing=off
   associated_display=active
-  click_script='yabai -m space --create && sketchybar --trigger space_change'
+  click_script='yabai -m space --create && sketchybar_2 --trigger space_change'
   icon.color=$WHITE
 )
 
-sketchybar --add bracket spaces_bracket '/space\..*/'  \
+sketchybar_2 --add bracket spaces_bracket '/space\..*/'  \
            --set spaces_bracket "${spaces_bracket[@]}" \
                                                        \
            --add item separator left                   \

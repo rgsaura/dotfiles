@@ -1,37 +1,81 @@
-# default layout (can be bsp, stack or float)
-yabai -m config layout bsp
 
-# New window spawns to the right if vertical split, or bottom if horizontal split
-yabai -m config window_placement second_child
-
-# padding set to 12px
-yabai -m config top_padding 0
-yabai -m config bottom_padding 40
-yabai -m config left_padding 5
-yabai -m config right_padding 5
-yabai -m config window_gap 12
-
-# center mouse on window with focus
-yabai -m config mouse_follows_focus on
-
-# yabai -m config window_border on
-# yabai -m config active_window_border_color 0xFF000000
-# yabai -m config normal_window_border_color 0x002E3440
-# yabai -m config insert_feedback_color 0xFFA3BE8C
-
-# modifier for clicking and dragging with mouse
-yabai -m config mouse_modifier alt
-# set modifier + left-click drag to move window
-yabai -m config mouse_action1 move
-# set modifier + right-click drag to resize window
-yabai -m config mouse_action2 resize
+# load scripting additions
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 
-# when window is dropped in center of another window, swap them (on edges it will split it)
-yabai -m mouse_drop_action swap
 
-yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^Calculator$" manage=off
+# Global settings
+yabai -m config                                 \
+    mouse_follows_focus          off            \
+    focus_follows_mouse          autofocus            \
+    window_origin_display        cursor         \
+    window_placement             second_child   \
+    window_zoom_persist          on             \
+    window_topmost               off            \
+    window_shadow                on             \
+    window_animation_duration    0.0            \
+    window_animation_frame_rate  120            \
+    window_opacity_duration      0.0            \
+    active_window_opacity        1.0            \
+    normal_window_opacity        0.90           \
+    window_opacity               off            \
+    insert_feedback_color        0xffd75f5f     \
+    active_window_border_color   0xff775759     \
+    normal_window_border_color   0xff555555     \
+    window_border_width          4              \
+    window_border_radius         12             \
+    window_border_blur           off            \
+    window_border_hidpi          on             \
+    window_border                off            \
+    split_ratio                  0.50           \
+    split_type                   auto           \
+    auto_balance                 off            \
+    top_padding                  0              \
+    bottom_padding    40             \
+    left_padding                 43           \
+    right_padding                5              \
+    window_gap                   12             \
+    layout                       bsp            \
+    mouse_modifier               alt            \
+    mouse_action1                move           \
+    mouse_action2                resize         \
+    mouse_drop_action            swap
+
+
+#
+# setup spaces
+#
+# for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 6)'); do
+#   yabai -m space --destroy 7
+# done
+
+# function setup_space {
+#   local idx="$1"
+#   local name="$2"
+#   local space=
+#   echo "setup space $idx : $name"
+
+#   space=$(yabai -m query --spaces --space "$idx")
+#   if [ -z "$space" ]; then
+#     yabai -m space --create
+#   fi
+
+#   yabai -m space "$idx" --label "$name"
+# }
+
+#setup_space 1 emacs
+#setup_space 2 code
+#setup_space 3 web
+#setup_space 4 social
+#setup_space 5 media
+#setup_space 6 other
+
+
+
+# Application-specific rules
+yabai -m rule --add app="^System Settings$" manage=off space=1
+yabai -m rule --add app="^Calculator$" manage=off 
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
@@ -39,3 +83,25 @@ yabai -m rule --add app="^ProtonVPN$" manage=off
 yabai -m rule --add app="^Hyper$" manage=off
 yabai -m rule --add app="^Parallels Desktop$" manage=off
 yabai -m rule --add app="^Warp$" manage=off
+yabai -m rule --add app="^veadotube mini$" manage=off
+yabai -m rule --add app="^XQuartz$" manage=on
+
+#Display 1
+yabai -m rule --add app="^Vivaldi$" manage=on space=2
+yabai -m rule --add app="^Cursor$" manage=on space=3
+
+yabai -m rule --add app="^DaVinci Resolve$" manage=on space=4
+yabai -m rule --add app="^Adobe Photoshop 2024$" manage=on space=5
+
+#Display 2,3
+
+
+#Display 2
+yabai -m rule --add app="^OBS$" manage=on space=6
+yabai -m rule --add app="^Obsidian$" manage=on space=5
+yabai -m rule --add app="^Termius$" manage=on space=7
+
+#Display 3
+
+yabai -m rule --add app="^Warp$" manage=on space=8
+
