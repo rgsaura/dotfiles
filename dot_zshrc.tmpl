@@ -1,3 +1,15 @@
+alias ll='lsd -lh --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias l='lsd --group-dirs=first'
+alias lla='lsd -lha --group-dirs=first'
+alias ls='lsd --group-dirs=first'
+alias cat='/opt/homebrew/bin/bat --paging=never'
+alias catn='cat'
+alias catnl='batcat'
+alias cl='clear'
+
+
+
 {{- if eq .chezmoi.os "darwin" -}}
 {{-   include ".zshrc_darwin" -}}
 {{- else if eq .chezmoi.os "linux" -}}
