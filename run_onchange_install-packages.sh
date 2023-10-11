@@ -41,18 +41,6 @@ if [ "$system_type" == "Darwin" ]; then
 elif [ "$system_type" == "Linux" ]; then
   echo "› Linux"
   sudo apt-get install -y $(awk '{print $1}' ~/.local/share/chezmoi/pkglist.txt)
-  cd ~/bin/setup/
-
-  ./bashmarks.sh
-  ./go.sh
-  ./neovim.sh
-  ./nvm.sh
-  ./rust.sh
-  ./yarn.sh
-
-  source "$HOME/.cargo/env"
-  cargo install --force starship
-  cargo install --force just
 
 else
   echo "Unsupported system type: $system_type"
