@@ -9,10 +9,10 @@ source /opt/homebrew/opt/powerlevel9k/powerlevel9k.zsh-theme
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Fig post block
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-# {{-   include ".zshrc_darwin" -}}
+
 {{- else if eq .chezmoi.os "linux" -}}
 PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
-# {{-   include ".zshrc_linux" -}}
+
 {{- end -}}
 
 
