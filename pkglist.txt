@@ -1,26 +1,27 @@
-# Terminal Utilities
-Zsh
-Powerlevel10k
-Powerlevel9k
-Fzf
-Xclip
-Scrub
-Shred
-Dircolors
-Highlight
-Bat
-Coderay
-Rougify
+# terminal utilities
+zsh
+powerlevel10k
+powerlevel9k
+fzf
+xclip
+scrub
+shred
+dircolors
+highlight
+bat
+coderay
+rougify
 
-# System Monitoring
+# system monitoring
 btop
 
-# Code Development
-Neovim
-Bash
-Git
-Byobu
-Python
-Direnv
-Docker
-Hyper
+# code development
+neovim
+bash
+git
+byobu
+python
+direnv
+docker
+hyper
+
