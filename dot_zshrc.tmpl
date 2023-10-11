@@ -17,6 +17,7 @@ eval "$(dircolors -b)"
 
 {{- end -}}
 
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
@@ -54,7 +55,60 @@ bindkey "^[[1;3C" forward-word
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-sudo/sudo.plugin.zsh
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+plugins=(
+    you-should-use
+	zsh-autosuggestions 
+	zsh-syntax-highlighting 
+	fast-syntax-highlighting 
+	zsh-autocomplete
+
+	# Most Used Plugins
+	git                   # Git aliases and enhancements.
+	z                    # Quick directory navigation.
+	colored-man-pages     # Colorized man pages.
+	autojump              # Navigate your filesystem more efficiently.
+	history-substring-search  # Search history as you type.
+
+	# Syntax Highlighting & Autocompletion
+	zsh-syntax-highlighting  # Syntax highlighting for Zsh commands.
+	zsh-autosuggestions      # Autosuggestions based on your history.
+	
+	# Development & Productivity
+	vscode                 # Visual Studio Code integration.
+	npm                    # Node.js package management.
+	python                 # Python-related aliases and functions.
+	docker                 # Docker aliases and functions.
+	kubectl                # Kubernetes command-line completions.
+	tmux                   # Tmux integration and shortcuts.
+
+	# Utility
+	extract                # Simplify extracting compressed files.
+	colorize               # Colorizes various types of files.
+	web-search             # Perform web searches from the terminal.
+	command-not-found      # Suggests corrections for mistyped commands.
+	fasd                   # Quick access to files and directories.
+	zsh-completions        # Additional completion definitions.
+
+	# File Operations
+	copydir                # Easily copy directories.
+	dirhistory             # Navigate your directory history with ease.
+	alias-tips             # Provides helpful aliases when you mistype a command.
+	zsh-navigation-tools   # Advanced tab completion and history navigation.
+
+	# System Administration
+	osx                    # OS X-specific aliases and functions.
+	brew                   # Homebrew package manager integration.
+
+	# Network & Connectivity
+	ssh-agent              # SSH key management.
+	autoenv                # Automatically activate virtual environments.
+
+	# Miscellaneous
+	auto-notify            # Shows desktop notifications for long-running commands.
+
+)
 # History settings
 HISTSIZE=1000
 SAVEHIST=1000

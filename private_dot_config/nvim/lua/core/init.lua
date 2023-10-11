@@ -61,17 +61,20 @@ local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 vim.env.PATH = vim.fn.stdpath "data" .. "/mason/bin" .. (is_windows and ";" or ":") .. vim.env.PATH
 
 -------------------------------------- autocmds ------------------------------------------
-local autocmd = vim.api.nvim_exec
+local autocmd = vim.api.nvim_create_autocmd
 
 -- dont list quickfix buffers
-vim.api.nvim_exec([[
-  autocmd FileType qf setlocal buflisted=false
-]], false)
+autocmd("FileType", {
+  pattern = "qf",
+  callback = function()
+    vim.opt_local.buflisted = false
+  end,
+})
 
 -- reload some chadrc options on-save
 autocmd("BufWritePost", {
   pattern = vim.tbl_map(function(path)
-    return vim.fn.fnamemodify(vim.fn.resolve(path), ':p')
+    return vim.fs.normalize(vim.loop.fs_realpath(path))
   end, vim.fn.glob(vim.fn.stdpath "config" .. "/lua/custom/**/*.lua", true, true, true)),
   group = vim.api.nvim_create_augroup("ReloadNvChad", {}),
 
