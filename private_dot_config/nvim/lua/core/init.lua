@@ -71,7 +71,7 @@ vim.api.nvim_exec([[
 -- reload some chadrc options on-save
 autocmd("BufWritePost", {
   pattern = vim.tbl_map(function(path)
-    return vim.fs.normalize(vim.loop.fs_realpath(path))
+    return vim.fn.fnamemodify(vim.fn.resolve(path), ':p')
   end, vim.fn.glob(vim.fn.stdpath "config" .. "/lua/custom/**/*.lua", true, true, true)),
   group = vim.api.nvim_create_augroup("ReloadNvChad", {}),
 
