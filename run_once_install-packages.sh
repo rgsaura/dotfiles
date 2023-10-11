@@ -22,6 +22,7 @@ if [ "$system_type" == "Darwin" ]; then
 
 elif [ "$system_type" == "Linux" ]; then
   echo "Installing Packages › Linux"
+  sudo apt install -y $(awk '!/^#/ {print $1}' ~/.local/share/chezmoi/pkglist.txt) 2>/dev/null
   sudo apt-get install -y $(awk '!/^#/ {print $1}' ~/.local/share/chezmoi/pkglist.txt) 2>/dev/null
   sudo apt update -y 
 else
