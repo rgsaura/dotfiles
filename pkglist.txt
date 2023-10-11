@@ -1,4 +1,26 @@
-neovim
+# Terminal Utilities
+Zsh
+Powerlevel10k
+Powerlevel9k
+Fzf
+Xclip
+Scrub
+Shred
+Dircolors
+Highlight
+Bat
+Coderay
+Rougify
 
-#BetterSys
-btop
+# System Monitoring
+Btop
+
+# Code Development
+Neovim
+Bash
+Git
+Byobu
+Python
+Direnv
+Docker
+Hyper

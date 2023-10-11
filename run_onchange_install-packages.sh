@@ -9,19 +9,7 @@ system_type=$(uname -s)
 if [ "$system_type" == "Darwin" ]; then
   echo "Updating Packages › Mac"
   # Fix that zsh nonsense
-  brew install bash
-  brew install git
-  brew install byobu
-  brew install neovim
-
-  brew install python
-  pip install --upgrade pip
-  brew install yarn
-  brew install golang
-  brew install direnv
-
-  brew install docker
-  brew install iterm2
+  brew install $(awk '!/^#/ {print $1}' ~/.local/share/chezmoi/pkglist.txt) 2>/dev/null
 
   # Additional Mac-specific settings
   # defaults write com.apple.dock workspaces-auto-swoosh -bool NO
@@ -32,14 +20,9 @@ if [ "$system_type" == "Darwin" ]; then
   # sudo chsh -s /usr/local/bin/bash "$USER"
   # cd ~/bin/setup/
 
-  # ./bashmarks.sh
-  # ./nvm.sh
-  # ./rust.sh
-  # ./unison.sh
-
 elif [ "$system_type" == "Linux" ]; then
   echo "Updating Packages › Linux"
-  sudo apt-get install -y $(awk '{print $1}' ~/.local/share/chezmoi/pkglist.txt)
+  sudo apt-get install -y $(awk '!/^#/ {print $1}' ~/.local/share/chezmoi/pkglist.txt) 2>/dev/null
 
 else
   echo "Unsupported system type: $system_type"
