@@ -19,7 +19,7 @@ sudo apt install -y git
 fi
 
 # install chezmoi
-curl -sfL https://git.io/chezmoi | sh
+sudo sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /bin
 
 export PATH=$HOME/bin:$PATH
 chezmoi init --apply --verbose git@github.com:rgsaura/dotfiles.git
