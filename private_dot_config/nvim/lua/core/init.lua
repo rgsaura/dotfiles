@@ -64,12 +64,9 @@ vim.env.PATH = vim.fn.stdpath "data" .. "/mason/bin" .. (is_windows and ";" or "
 local autocmd = vim.api.nvim_exec
 
 -- dont list quickfix buffers
-autocmd("FileType", {
-  pattern = "qf",
-  callback = function()
-    vim.opt_local.buflisted = false
-  end,
-})
+vim.api.nvim_exec([[
+  autocmd FileType qf setlocal buflisted=false
+]], false)
 
 -- reload some chadrc options on-save
 autocmd("BufWritePost", {
