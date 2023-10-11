@@ -23,7 +23,7 @@ if [ "$system_type" == "Darwin" ]; then
 elif [ "$system_type" == "Linux" ]; then
   echo "Updating Packages › Linux"
   sudo apt-get install -y $(awk '!/^#/ {print $1}' ~/.local/share/chezmoi/pkglist.txt) 2>/dev/null
-  sudo apt update -y && sudo apt upgrade -y
+  sudo apt update -y 
 else
   echo "Unsupported system type: $system_type"
   exit 1
