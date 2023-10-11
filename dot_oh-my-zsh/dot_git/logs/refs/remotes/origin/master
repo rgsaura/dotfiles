@@ -1,0 +1,30 @@
+0000000000000000000000000000000000000000 ca0acf31ef163fd2a6bf562c9b9d6077975b41f8 Rodrigo Garcia <rodrigogarciasaura@gmail.com> 1673730053 +0100	fetch --depth=1 origin: storing head
+ca0acf31ef163fd2a6bf562c9b9d6077975b41f8 e55e3f0f56ab4df21eb33e19569c295e7e5e71a4 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1674819562 +0100	pull --quiet --rebase origin master: fast-forward
+e55e3f0f56ab4df21eb33e19569c295e7e5e71a4 041c35ffc8cd97dd6327f44e35fa777af6f8e845 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1675987545 +0100	pull --quiet --rebase origin master: fast-forward
+041c35ffc8cd97dd6327f44e35fa777af6f8e845 277f38212aef31a6baba2cf1a0a355af611be5e0 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1677404450 +0100	pull --quiet --rebase origin master: fast-forward
+277f38212aef31a6baba2cf1a0a355af611be5e0 72732a224e886933df6b64a49ec6f5e94c884612 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1679247538 +0100	pull --quiet --rebase origin master: fast-forward
+72732a224e886933df6b64a49ec6f5e94c884612 4586808f86bf3bfdf97685380472b63597ce43c0 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1681114690 +0200	pull --quiet --rebase origin master: fast-forward
+4586808f86bf3bfdf97685380472b63597ce43c0 5d3e86e2a48adf7a308773f8f1b725d187c7c5ef Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1682433126 +0200	pull --quiet --rebase origin master: fast-forward
+5d3e86e2a48adf7a308773f8f1b725d187c7c5ef aab3bfff9f27a261dcd4cd4a2082a2ce3fff8c59 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1683798140 +0200	pull --quiet --rebase origin master: fast-forward
+aab3bfff9f27a261dcd4cd4a2082a2ce3fff8c59 ec369bb38e873fa2e8954bc45bc192fdb0051313 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1684938376 +0200	pull --quiet --rebase origin master: fast-forward
+ec369bb38e873fa2e8954bc45bc192fdb0051313 46c70406dd0b26bbd61210873ad6c86d9e8ee5da Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1686166201 +0200	pull --quiet --rebase origin master: fast-forward
+46c70406dd0b26bbd61210873ad6c86d9e8ee5da 8a6fc5c16d49368dc8f9ddd965a9e25ef652e129 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1687468071 +0200	pull --quiet --rebase origin master: fast-forward
+8a6fc5c16d49368dc8f9ddd965a9e25ef652e129 fe4b5659863c388786986d70fa6d1bb66b00afb6 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1688742182 +0200	pull --quiet --rebase origin master: fast-forward
+fe4b5659863c388786986d70fa6d1bb66b00afb6 338b9a615a276240deaf4b6a26bb3abda204fe3f Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1690206820 +0200	pull --quiet --rebase origin master: fast-forward
+338b9a615a276240deaf4b6a26bb3abda204fe3f 4188b22aea3356a02768505103e42a96d18547a3 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1691284407 +0200	pull --quiet --rebase origin master: fast-forward
+4188b22aea3356a02768505103e42a96d18547a3 33c0de7add12b050b94fd6f2f988e9b5547d172c Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1692812994 +0200	pull --quiet --rebase origin master: fast-forward
+33c0de7add12b050b94fd6f2f988e9b5547d172c 38ef5192cb1c43159b516d15ab8fed96f847b36b Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1694429076 +0200	fetch: fast-forward
+38ef5192cb1c43159b516d15ab8fed96f847b36b bbda81fe4b338f00bbf7c7f33e6d1b12d067dc05 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1694814320 +0200	fetch: fast-forward
+bbda81fe4b338f00bbf7c7f33e6d1b12d067dc05 1c55a0fe5246487ec9f18e03b7f28862b76cb7ab Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1695391375 +0200	fetch: fast-forward
+1c55a0fe5246487ec9f18e03b7f28862b76cb7ab a17789eedea4f6b9b5a9c970174d6d5dc0ef64ee Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1695648218 +0200	fetch: fast-forward
+a17789eedea4f6b9b5a9c970174d6d5dc0ef64ee 4fb5d02db94fa87d22afea9825bd5f866e0cd1ac Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1695759323 +0200	fetch: fast-forward
+4fb5d02db94fa87d22afea9825bd5f866e0cd1ac 0e1e877ea9182f87b3ab34cbc2ea944b34f5345e Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1695923620 +0200	fetch: fast-forward
+0e1e877ea9182f87b3ab34cbc2ea944b34f5345e d3b6f1fd5e42deafb3a6458213762a492e484073 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1695938204 +0200	fetch: fast-forward
+d3b6f1fd5e42deafb3a6458213762a492e484073 27402e2603b9354f419af3695bad8ff17ed33bac Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1695985065 +0200	fetch: fast-forward
+27402e2603b9354f419af3695bad8ff17ed33bac b75b01a3092e59cd10ff01084d4a5e3ac0be3e3a Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1696852225 +0200	fetch: fast-forward
+b75b01a3092e59cd10ff01084d4a5e3ac0be3e3a 30a8a5d3e2f36e395c439c3346ef96e40e7bd277 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1696867130 +0200	fetch: fast-forward
+30a8a5d3e2f36e395c439c3346ef96e40e7bd277 29b99c2c7b16f22f3ca2bdf9478ba700ac6c48b5 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1696867453 +0200	fetch: fast-forward
+29b99c2c7b16f22f3ca2bdf9478ba700ac6c48b5 24b2600558f999dd53f0d354ad61fc07cf7d6e2b Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1696867815 +0200	fetch: fast-forward
+24b2600558f999dd53f0d354ad61fc07cf7d6e2b 38db3e16ef3266800e1a9516c0615ff04ec97cb6 Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1696878101 +0200	fetch: fast-forward
+38db3e16ef3266800e1a9516c0615ff04ec97cb6 b1821a24f0574488554de8e7f6d0735fb851de8b Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1696954611 +0200	fetch: fast-forward
+b1821a24f0574488554de8e7f6d0735fb851de8b da3b8fcb6a6bcf4d440b9768d2deab27f787929a Rodrigo Garcia <16281075+rgsaura@users.noreply.github.com> 1697040431 +0200	fetch: fast-forward
