@@ -20,6 +20,7 @@ eval "$(dircolors -b)"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.config/.env
 
 # Custom Aliases
 alias ll='lsd -lh --group-dirs=first'
@@ -36,6 +37,9 @@ alias x=exit
 alias t=tmux
 alias h=helm
 alias k=kubectl
+alias tf=terraform
+alias i=interpreter
+alias ai=aichat
 # remote ssh
 alias pi="100.79.241.52"
 alias ssh-pi="ssh rgsaura@100.79.241.52 -Y"

@@ -3,6 +3,13 @@
 # Navigate to the home directory
 cd "$HOME" || exit
 
+install_packages() {
+  curl -sS https://webi.sh/ffmpeg | sh
+  curl -sS https://webi.sh/lsd | sh
+  curl -sS https://webi.sh/bat | sh
+  # Add more package installation commands here if needed
+}
+
 # Determine the system type
 system_type=$(uname -s)
 
@@ -19,12 +26,20 @@ if [ "$system_type" == "Darwin" ]; then
   # git config --global core.excludesfile ~/.gitignore
   # sudo chsh -s /usr/local/bin/bash "$USER"
   # cd ~/bin/setup/
+  install_packages
 
 elif [ "$system_type" == "Linux" ]; then
   echo "Updating Packages › Linux"
   sudo apt install -y $(awk '!/^#/ {print $1}' ~/.local/share/chezmoi/pkglist.txt) 2>/dev/null
   sudo apt-get install -y $(awk '!/^#/ {print $1}' ~/.local/share/chezmoi/pkglist.txt) 2>/dev/null
+
+  install_packages
   sudo apt update -y 
+  
+
+elif [ "$system_type" == "Windows_NT" ]; then
+  echo "Updating Packages › Windows"
+  # Add Windows-specific package update commands here
 else
   echo "Unsupported system type: $system_type"
   exit 1

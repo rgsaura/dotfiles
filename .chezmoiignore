@@ -13,3 +13,8 @@ pkglist.txt
 
 
 {{ end }}
+
+{{ if eq .chezmoi.os "windows" }}
+
+
+{{ end }}
