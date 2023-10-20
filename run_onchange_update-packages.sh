@@ -4,7 +4,6 @@
 cd "$HOME" || exit
 
 install_packages() {
-  curl -sS https://webi.sh/ffmpeg | sh
   curl -sS https://webi.sh/lsd | sh
   curl -sS https://webi.sh/bat | sh
   # Add more package installation commands here if needed
