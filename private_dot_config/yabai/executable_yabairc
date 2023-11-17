@@ -8,7 +8,7 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 # Global settings
 yabai -m config                                 \
     mouse_follows_focus          off            \
-    focus_follows_mouse          off            \
+    focus_follows_mouse          on           \
     window_origin_display        cursor         \
     window_placement             second_child   \
     window_zoom_persist          on             \
@@ -40,9 +40,10 @@ yabai -m config                                 \
     mouse_modifier               alt            \
     mouse_action1                move           \
     mouse_action2                resize         \
-    mouse_drop_action            swap
+    mouse_drop_action            swap           \
+    layer                        normal         \
 
-
+yabai -m display --focus mouse
 #
 # setup spaces
 #
@@ -73,36 +74,25 @@ yabai -m config                                 \
 
 
 # Application-specific rules
-yabai -m rule --add app="^System Settings$" manage=off space=1
-yabai -m rule --add app="^Calculator$" manage=off 
-yabai -m rule --add app="^Karabiner-Elements$" manage=off
-yabai -m rule --add app="^Finder$" manage=off
-yabai -m rule --add app="^1Password$" manage=off
-yabai -m rule --add app="^ProtonVPN$" manage=off
-yabai -m rule --add app="^Hyper$" manage=off
-yabai -m rule --add app="^Parallels Desktop$" manage=off
-yabai -m rule --add app="^veadotube mini$" manage=off
-yabai -m rule --add app="^XQuartz$" manage=on
+yabai -m rule --add app!="^(Vivaldi|Cursor|DaVinci|Obsidian|Termius|Warp)$" manage=off 
+yabai -m signal --add event=window_created action="yabai -m window --layer normal"
+yabai -m rule --add app="^Widgetter$" layer=below
 
-#Display 1
-yabai -m rule --add app="^Vivaldi$" manage=on space=2
-yabai -m rule --add app="^Cursor$" manage=on space=3
+# Application-specific rules - Space
+# Display 1x
+yabai -m rule --add app="^Vivaldi$" space=2
+yabai -m rule --add app="^Cursor$" space=3
+yabai -m rule --add app="^DaVinci Resolve$" space=4
+yabai -m rule --add app="^Adobe Photoshop 2024$" space=4
 
-yabai -m rule --add app="^DaVinci Resolve$" manage=on space=4
-yabai -m rule --add app="^Adobe Photoshop 2024$" manage=off space=4
+# Display 2
+yabai -m rule --add app="^OBS$" space=5
+yabai -m rule --add app="^Obsidian$" space=5
 
-#Display 2,3
-
-
-#Display 2
-yabai -m rule --add app="^OBS$" manage=on space=5
-yabai -m rule --add app="^Obsidian$" manage=on space=5
-
-#Display 3
-yabai -m rule --add app="^Termius$" manage=on space=6
-yabai -m rule --add app="^Warp$" manage=on space=6
+# Display 3
+yabai -m rule --add app="^Termius$" space=6
+yabai -m rule --add app="^Warp$" space=6
 
 
-#Rest of apps manage=off
-yabai -m rule --add app=".*" manage=off
-
+#Set FullScreen
+yabai -m query --windows | jq -r '.[] | select(.app=="Warp").id' | xargs -I{} yabai -m window {} --toggle zoom-fullscreen

@@ -18,3 +18,5 @@ pkglist.txt
 
 
 {{ end }}
+
+**/.DS_Store
