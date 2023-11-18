@@ -19,3 +19,9 @@ end
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
+
+if vim.fn.filereadable("Session.vim") == 1 then
+  vim.cmd [[ source Session.vim ]]
+end
+
+vim.cmd [[ autocmd VimLeave * mksession! Session.vim ]]
