@@ -74,7 +74,7 @@ yabai -m display --focus mouse
 
 
 # Application-specific rules
-yabai -m rule --add app!="^(Vivaldi|Cursor|DaVinci|Obsidian|Termius|Warp)$" manage=off 
+yabai -m rule --add app!="^(Emacs|Vivaldi|Cursor|DaVinci|Obsidian|Termius|Warp)$" manage=off 
 yabai -m signal --add event=window_created action="yabai -m window --layer normal"
 yabai -m rule --add app="^Widgetter$" layer=below
 
@@ -92,7 +92,12 @@ yabai -m rule --add app="^Obsidian$" space=5
 # Display 3
 yabai -m rule --add app="^Termius$" space=6
 yabai -m rule --add app="^Warp$" space=6
+yabai -m rule --add app="^Emacs$" space=6
 
 
 #Set FullScreen
 yabai -m query --windows | jq -r '.[] | select(.app=="Warp").id' | xargs -I{} yabai -m window {} --toggle zoom-fullscreen
+
+#Emacs - it needs it, doesnt work if not specified
+yabai -m rule --add app="Emacs" manage=on
+yabai -m rule --add app="Emacs" layer=normal    

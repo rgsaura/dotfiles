@@ -20,8 +20,10 @@ dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
 
-if vim.fn.filereadable("Session.vim") == 1 then
+if vim.fn.filereadable("Session.vim") == 1 and vim.fn.getcwd() == vim.fn.expand('%:p:h') then
   vim.cmd [[ source Session.vim ]]
 end
 
-vim.cmd [[ autocmd VimLeave * mksession! Session.vim ]]
+if vim.fn.filereadable("Session.vim") == 0 and vim.fn.getcwd() == vim.fn.expand('%:p:h') then
+  vim.cmd [[ autocmd VimLeave * mksession! Session.vim ]]
+end
