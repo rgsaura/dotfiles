@@ -13,10 +13,14 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +41 ~/.local/share/chezmoi/dot_zshrc.tmpl
+badd +72 dot_zshrc.tmpl
+badd +25 private_dot_config/nvim/lua/custom/plugins.lua
+badd +23 private_dot_config/nvim/init.lua
+badd +90 private_dot_config/yabai/executable_yabairc
+badd +1 dot_tmux.conf
 argglobal
 %argdel
-edit ~/.local/share/chezmoi/dot_zshrc.tmpl
+edit dot_tmux.conf
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -33,12 +37,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 87) / 175)
-exe 'vert 2resize ' . ((&columns * 144 + 87) / 175)
+exe 'vert 1resize ' . ((&columns * 30 + 92) / 184)
+exe 'vert 2resize ' . ((&columns * 153 + 92) / 184)
 argglobal
 enew
 file NvimTree_1
-balt ~/.local/share/chezmoi/dot_zshrc.tmpl
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -59,16 +62,16 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 46 - ((0 * winheight(0) + 14) / 29)
+let s:l = 7 - ((6 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 46
-normal! 013|
+keepjumps 7
+normal! 0
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 87) / 175)
-exe 'vert 2resize ' . ((&columns * 144 + 87) / 175)
+exe 'vert 1resize ' . ((&columns * 30 + 92) / 184)
+exe 'vert 2resize ' . ((&columns * 153 + 92) / 184)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -84,6 +87,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

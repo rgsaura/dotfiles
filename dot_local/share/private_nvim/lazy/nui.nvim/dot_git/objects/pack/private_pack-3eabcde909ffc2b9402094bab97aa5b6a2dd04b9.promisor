@@ -1,0 +1,11 @@
+c0c8e347ceac53030f5c1ece1c5a5b6a17a25b32 HEAD
+e2987131a8825abdb0f36e0870e24a8a85e2d42f refs/heads/feat-show-mount
+0ea9e0dfc8802403ac57a1a88d9180ef950fbfe9 refs/heads/feat-sidebar
+7e3a8e2dbb567b037bf27e2b04d61b96eb2bd11e refs/heads/feat-split-existing-winid
+a0449542a40494080039604b59da6b511755ce0a refs/heads/feat-statusline
+3a8fb082c03728443f1db33b5c93dfb90042b16c refs/heads/feat-tree-linked-list
+553082b7ebd8092dc9281350e036c6ba70e5663e refs/heads/fix-text-highlight
+c0c8e347ceac53030f5c1ece1c5a5b6a17a25b32 refs/heads/main
+936b5b9d45ddca7561dbed6dc196809a3f7c2e64 refs/heads/release-please--branches--main--components--nui.nvim
+7a524120a7a70761b5a65b602fd235a65cb005aa refs/tags/0.1.0
+9e3916e784660f55f47daa6f26053ad044db5d6a refs/tags/0.2.0

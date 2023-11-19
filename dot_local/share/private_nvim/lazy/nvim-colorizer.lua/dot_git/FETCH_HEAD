@@ -1,0 +1,3 @@
+dde3084106a70b9a79d48f426f6d6fec6fd203f7		branch 'master' of https://github.com/NvChad/nvim-colorizer.lua
+cf7310dbe6529baaed1ca48345ba96e9c266dabc	not-for-merge	branch 'color-editor' of https://github.com/NvChad/nvim-colorizer.lua
+a6a1a236aa3d3b00294a5642409c84a75c2c4e79	not-for-merge	branch 'cursor-highlight' of https://github.com/NvChad/nvim-colorizer.lua

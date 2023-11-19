@@ -1,0 +1,6 @@
+1151a14c1d76487b11ac4e069def7fcdb5caa103	not-for-merge	branch '2415-highlight-overhaul' of https://github.com/nvim-tree/nvim-tree.lua
+74a0d86ba05267fdff4a922cc924a8ba6cb7f818	not-for-merge	branch '2468-fix-subfolders-events' of https://github.com/nvim-tree/nvim-tree.lua
+46e1f776f0a714099b9160604fbb62fba2540376	not-for-merge	branch 'master' of https://github.com/nvim-tree/nvim-tree.lua
+90d7b8edb1d715086b34572a0fb742faf23a271b	not-for-merge	tag 'compat-nvim-0.6' of https://github.com/nvim-tree/nvim-tree.lua
+949913f1860eb85024fa1967dbd89ac797777b0d	not-for-merge	tag 'compat-nvim-0.7' of https://github.com/nvim-tree/nvim-tree.lua
+59e65d88db177ad1e6a8cffaafd4738420ad20b6	not-for-merge	tag 'nightly' of https://github.com/nvim-tree/nvim-tree.lua
