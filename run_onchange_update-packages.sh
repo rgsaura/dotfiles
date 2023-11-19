@@ -3,16 +3,11 @@
 # Navigate to the home directory
 cd "$HOME" || exit
 
-install_packages() {
-  curl -sS https://webi.sh/lsd | sh
-  curl -sS https://webi.sh/bat | sh
-  # Add more package installation commands here if needed
-}
 
 # Determine the system type
 system_type=$(uname -s)
 
-if [ "$system_type" == "Darwin" ]; then
+if[ "$system_type" == "Darwin" ]; then
   echo "Updating Packages › Mac"
   # Fix that zsh nonsense
   brew install $(awk '!/^#/ {print $1}' ~/.local/share/chezmoi/pkglist.txt) 2>/dev/null
@@ -24,16 +19,14 @@ if [ "$system_type" == "Darwin" ]; then
 
   # git config --global core.excludesfile ~/.gitignore
   # sudo chsh -s /usr/local/bin/bash "$USER"
-  # cd ~/bin/setup/
-  install_packages
+  # cd ~/bin/setup
 
 elif [ "$system_type" == "Linux" ]; then
   echo "Updating Packages › Linux"
   sudo apt install -y $(awk '!/^#/ {print $1}' ~/.local/share/chezmoi/pkglist.txt) 2>/dev/null
   sudo apt-get install -y $(awk '!/^#/ {print $1}' ~/.local/share/chezmoi/pkglist.txt) 2>/dev/null
 
-  install_packages
-  sudo apt update -y 
+   sudo apt update -y 
   
 
 elif [ "$system_type" == "Windows_NT" ]; then
