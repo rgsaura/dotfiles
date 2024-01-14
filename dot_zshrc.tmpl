@@ -1,6 +1,6 @@
 {{ if eq .chezmoi.os "darwin" -}}
 # alias local ssh
-alias kali="ssh rgsaura@10.211.55.6 -Y"
+alias kali="ssh rgsaura@100.66.92.79 -Y"
 alias win='ssh rodrigogarcia@10.211.55.4 "powershell"'
 PATH=$HOME/.local/share/fig/plugins/git-open:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMwareFusion.app/Contents/Public:/Library/TeX/texbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Applications/TopazPhotoAI.app/Contents/Resources/bin:/Applications/Wireshark.app/Contents/MacOS:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:$HOME/.cargo/bin:$HOME/.fig/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.local/share/fig/plugins/git-flow:$HOME/.local/share/fig/plugins/git-extra-commands_unixorn/bin:$HOME/.local/share/fig/plugins/git-extra-commands_unixorn/bin:$HOME/.local/share/fig/plugins/git-flow:$HOME/Documents/scripts/
 
@@ -17,14 +17,14 @@ eval "$(dircolors -b)"
 
 {{- end -}}
 
-source $HOME/.config/op/plugins.sh
+[[ -f $HOME/.config/op/plugins.sh ]] && source $HOME/.config/op/plugins.sh
 
 eval "$(zoxide init zsh)"
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-source ~/.config/.env
+[[ -f ~/.config/.env ]] && source ~/.config/.env
 
 # Custom Aliases
 alias ll='lsd -lh --group-dirs=first'
@@ -49,6 +49,7 @@ alias python=python3
 alias ranger='. ranger'
 alias rg='. ranger'
 alias ch=chezmoi
+alias py=python
 # remote ssh
 alias pi="100.79.241.52"
 alias ssh-pi="ssh rgsaura@100.79.241.52 -Y"

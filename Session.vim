@@ -13,35 +13,20 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +72 dot_zshrc.tmpl
-badd +25 private_dot_config/nvim/lua/custom/plugins.lua
-badd +23 private_dot_config/nvim/init.lua
-badd +90 private_dot_config/yabai/executable_yabairc
-badd +1 dot_tmux.conf
+badd +3 private_dot_config/nvim/init.lua
+badd +58 private_dot_config/yabai/executable_yabairc
+badd +21 run_once_install-packages.sh
+badd +10 run_onchange_update-packages.sh
+badd +29 pkglist.txt
+badd +1 :\ 28.184\ ms
+badd +1 ~/REPOS/cli.exohuman.io-use
+badd +37 private_dot_config/skhd/skhdrc
+badd +7 NvimTree_1
 argglobal
 %argdel
-edit dot_tmux.conf
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 92) / 184)
-exe 'vert 2resize ' . ((&columns * 153 + 92) / 184)
 argglobal
 enew
-file NvimTree_1
+balt private_dot_config/nvim/init.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -50,28 +35,6 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-wincmd w
-argglobal
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 7 - ((6 * winheight(0) + 16) / 33)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 7
-normal! 0
-wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 92) / 184)
-exe 'vert 2resize ' . ((&columns * 153 + 92) / 184)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -79,8 +42,6 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
-let &winminheight = s:save_winminheight
-let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)

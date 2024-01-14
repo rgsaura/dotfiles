@@ -11,13 +11,14 @@ highlight
 bat
 coderay
 rougify
+zoxide
+ripgrep
+
 
 # system monitoring
 btop
 
 # code development
-neovim
-bash
 git
 byobu
 python
@@ -25,3 +26,4 @@ direnv
 docker
 hyper
 
+snapd
