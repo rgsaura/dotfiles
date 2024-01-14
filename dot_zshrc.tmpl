@@ -17,14 +17,14 @@ eval "$(dircolors -b)"
 
 {{- end -}}
 
-[[ -f $HOME/.config/op/plugins.sh ]] && source $HOME/.config/op/plugins.sh
+#[[ -f $HOME/.config/op/plugins.sh ]] && source $HOME/.config/op/plugins.sh
 
 eval "$(zoxide init zsh)"
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-[[ -f ~/.config/.env ]] && source ~/.config/.env
+#[[ -f ~/.config/.env ]] && source ~/.config/.env
 
 # Custom Aliases
 alias ll='lsd -lh --group-dirs=first'
